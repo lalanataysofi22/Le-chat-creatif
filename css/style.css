@@ -1,0 +1,748 @@
+
+/*---------------------------Inicio Index-------------------*/
+/*Inicio Nav Bar*/
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }
+
+.innerWrapper {
+	max-width: 920px;
+	margin: 0 auto;
+}
+
+
+h2, h4 {
+	font-family: "BlackJack Font";
+}
+
+h2 {
+	font-family: "BlackJack Font";
+}
+
+/* NAV SECTION */
+
+.companyName {
+	padding: 18px 17px 18px 15%;
+	margin: 0;
+	float: left;
+	color: #fff;
+	width: 45%;
+	background: #ad2b2e;
+	font-family: "BlackJack Font";
+  font-weight: 400;
+	font-size: 1.8rem;
+	text-align: left;
+  font-variant: small-caps;
+}
+
+nav {
+	padding: 0;
+	margin: 0;
+	width: 55%;
+	float: right;
+}
+
+
+header nav ul {
+	float: right;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	border-right: 20px #ad2b2e;
+}
+
+header nav ul li {
+	float: left;
+	margin: 0;
+	display: inline;
+	width: 25%;
+	text-align: center;
+	background: #ad2b2e;
+}
+
+header nav ul li:hover {
+	background: none;
+  font-style: bold;
+  transform: scale(1.2);
+}
+
+header nav ul li a {
+	text-decoration: none;
+	padding: 25px 20px;
+	color: #fff;
+	margin: 0;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 1rem;
+}
+
+header nav ul li a:focus {
+	outline: none;
+}
+
+/* HEAD SECTION */
+
+header {
+	
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.hero {
+	text-align: center;
+	text-shadow: 1px 0 2px #ad2b2e;
+}
+
+.hero h1 {
+	font-size: 5.5rem;
+	margin:0;
+	padding-top: 200px;
+	font-family: 'Abril Fatface', serif;
+	color: #fff;
+}
+
+.hero h3 {
+	padding-bottom: 250px;
+	font-family: 'Quicksand', sans-serif;
+	font-style: italic;
+	color: #fff;
+	font-size: 1.7rem;
+	font-weight: 700;
+	margin: 0;
+}
+
+
+@media (max-width:900px) {
+  .companyName {
+    width: 100%;
+    text-align: center;
+    padding: 4% 4%;
+  }
+  
+ .mainNav {
+    width: 100%;
+  }
+  
+  header nav ul {
+    border: none;
+  }
+  
+  header nav ul li a {
+    padding: 25px 2%;
+  }
+}
+
+/*Fin Nav Bar*/
+
+/*Inicio Slider*/
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F7EAE2;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.skw-pages {
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+}
+
+.skw-page {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.skw-page__half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 1s;
+}
+.skw-page__half--left {
+  left: 0;
+  -webkit-transform: translate3d(-32.4vh, 100%, 0);
+          transform: translate3d(-32.4vh, 100%, 0);
+}
+.skw-page__half--right {
+  left: 50%;
+  -webkit-transform: translate3d(32.4vh, -100%, 0);
+          transform: translate3d(32.4vh, -100%, 0);
+}
+.skw-page.active .skw-page__half {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.skw-page__skewed {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 140%;
+  height: 100%;
+  -webkit-transform: skewX(-18deg);
+          transform: skewX(-18deg);
+  background: #000;
+}
+.skw-page__half--left .skw-page__skewed {
+  left: -40%;
+}
+.skw-page__half--right .skw-page__skewed {
+  right: -40%;
+}
+.skw-page__content {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column wrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80%;
+  padding: 0 30%;
+  color: #fff;
+  -webkit-transform: skewX(18deg);
+          transform: skewX(18deg);
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  background-size: cover;
+}
+.skw-page__half--left .skw-page__content {
+  padding-left: 30%;
+  padding-right: 30%;
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+}
+.skw-page__half--right .skw-page__content {
+  padding-left: 30%;
+  padding-right: 30%;
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+}
+.skw-page.inactive .skw-page__content {
+  opacity: 0.5;
+  -webkit-transform: skewX(18deg) scale(0.95);
+          transform: skewX(18deg) scale(0.95);
+}
+.skw-page__heading {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 45px;
+  text-align: center;
+}
+.skw-page__description {
+  font-size: 30px;
+  text-align: center;
+}
+.skw-page__link {
+  color: #FFA0A0;
+}
+.skw-page-1 .skw-page__half--left .skw-page__content {
+  background-image:url(../Images/Publicidad.jpg);
+}
+.skw-page-1 .skw-page__half--right .skw-page__content {
+  background: #d14204
+}
+.skw-page-2 .skw-page__half--left .skw-page__content {
+  background: #d14204;
+}
+.skw-page-2 .skw-page__half--right .skw-page__content {
+  background-image:url("../Images/office design.jpg");
+}
+.skw-page-3 .skw-page__half--left .skw-page__content {
+  background-image:url("../Images/web design.jpg");
+}
+.skw-page-3 .skw-page__half--right .skw-page__content {
+  background: #d14204;
+}
+.skw-page-4 .skw-page__half--left .skw-page__content {
+  background: #d14204;
+}
+.skw-page-4 .skw-page__half--right .skw-page__content {
+  background-image: url("../Images/Events Design.jpg");
+}
+.skw-page-5 .skw-page__half--left .skw-page__content {
+  background-image: url("../Images/Editorial Design.jpg");
+}
+.skw-page-5 .skw-page__half--right .skw-page__content {
+  background: #d14204;
+}
+
+/*Fin Slider*/
+
+/*Inicio Cartas*/
+.container {
+  margin-top: 25px;
+}
+
+@font-face{
+	font-family:"Arch Rival Font";
+	font-style: normal;
+	font-weight:400;
+	src:url(../Fonts/SF_Arch_Rival.ttf);
+}
+@font-face{
+	 font-family: "BlackJack Font";
+  font-style: normal;
+  font-weight: 600;
+	src:url(../Fonts/blackjack.ttf);
+}
+
+p{
+  font-family:"Arch Rival Font";
+  font-weight: 300;
+  line-height: 1.5;
+
+}
+
+h2.BlackJack {
+  font-family: "BlackJack Font";
+}
+
+
+a{
+  font-family:"Arch Rival Font";
+}
+
+
+img-fluid {
+    box-shadow: -5px 8px 20px 0px rgba(229,16,2,0.15);
+}
+
+/*Fin Cartas */
+
+/*---------------------------Fin Index-------------------*/
+
+/*---------------------------Inicio Quienes Somos-------------------*/
+
+/*Inicio Cartas*/
+
+
+
+.snip1336 {
+  font-family:"Arch Rival Font";
+  position: relative;
+  overflow: hidden;
+  margin: 54px;
+  min-width: 300px;
+  max-width: 415px;
+  width: 100%;
+  color: #F7EAE2;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: #c74a4d;
+}
+.snip1336 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1336 img {
+  max-width: 100%;
+  vertical-align: top;
+  opacity: 0.85;
+}
+.snip1336 figcaption {
+  width: 100%;
+  background-color: #856b03;
+  padding: 25px;
+  position: relative;
+}
+.snip1336 figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #856b03;
+}
+.snip1336 figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.snip1336 figcaption a:hover {
+  opacity: 1;
+}
+.snip1336 .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.snip1336 .follow {
+margin-left: 24%;
+  margin-right: 4%;
+  border-color: #00124d;
+  color: #00124d;
+}
+.snip1336 h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+}
+.snip1336 h2 span {
+  display: block;
+	font-family: "BlackJack Font";
+  font-size: 20px;
+  color: #00124d;
+}
+.snip1336 p {
+  margin: 0 0 10px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+
+
+/*Fin Cartas*/
+
+/*Inicio Cartas 2*/
+
+.card-title{font-family: "BlackJack Font";}
+
+.tittle1{font-family: "BlackJack Font";}
+
+.video {border-style: groove;
+	border-color: crimson;}
+ 
+/*Fin Cartas2*/
+
+/*---------------------------Fin Quienes Somos-------------------*/
+
+/*---------------------------Inicio Servicios-------------------*/
+/*Inicio Nav services*/
+
+
+#all > ul {
+		list-style: none;
+		float:left;
+		width: 250px;
+		padding: 0 10px 0 0;
+}
+
+#all a {
+		text-decoration: none;
+		display: block;
+		padding: 28px;
+		background: #F29149;
+		border-radius: 3px;
+		color: #ED9E69;
+		text-align: center;
+		margin: 0 0 3px 0;
+		font-family:"Arch Rival Font";
+		font-weight: bold;
+		font-size: 25px;
+		font-variant: small-caps;
+	    
+		
+		-webkit-transition: all 0.2s ease;
+		-moz-transition: all 0.2s ease;
+		-o-transition: all 0.2s ease;
+}
+
+#all:hover a {
+		opacity: 1.0;
+}
+
+#all:hover ul:hover a {
+		opacity: 0.5;
+}
+
+#all:hover ul:hover a:hover {
+		opacity: 1;
+}
+
+#all:active a {
+		opacity: 1.0;
+}
+
+#all:active ul:active a {
+		opacity: 0.5;
+}
+
+#all:active ul:active a:active {
+		opacity: 0.9;
+}
+
+
+
+
+/*Fin Nav services*/
+
+/*Inicio Slider*/
+
+#slider-wrapper {
+  width: 1200px;
+  height: 500px;
+ 
+  position: relative;
+margin-left:12px auto;
+  margin-bottom: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+#s1 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -36px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s2 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: -12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s3 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 12px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s4 {
+  padding: 6px;
+  background: #000000;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  margin-left: 36px;
+  border-radius: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  z-index: 999;
+}
+
+#s1:hover,
+#s2:hover,
+#s3:hover,
+#s4:hover {
+  opacity: .50;
+}
+
+.inner-wrapper {
+  width: 1200px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-bottom: 0px;
+  overflow: hidden;
+}
+
+.control {
+  display: none;
+}
+
+#Slide1:checked ~ .overflow-wrapper {
+  margin-left: 0%;
+}
+
+#Slide2:checked ~ .overflow-wrapper {
+  margin-left: -100%;
+}
+
+#Slide3:checked ~ .overflow-wrapper {
+  margin-left: -200%;
+}
+
+#Slide4:checked ~ .overflow-wrapper {
+  margin-left: -300%;
+}
+
+#Slide1:checked + #s1 {
+  opacity: 1;
+}
+
+#Slide2:checked + #s2 {
+  opacity: 1;
+}
+
+#Slide3:checked + #s3 {
+  opacity: 1;
+}
+
+#Slide4:checked + #s4 {
+  opacity: 1;
+}
+
+.overflow-wrapper {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide img {
+  width: 25%;
+  float: left;
+}
+/*Fin slider*/
+
+/*Inicio table*/
+.parragraph{
+	margin-left: 35px;
+}
+.services{
+	margin-left: 25px;
+}
+/*Fin table*/
+/*---------------------------Fin Servicios-------------------*/
+
+/*---------------------------Inicio Contactanos-------------------*/
+/*Inicio Formulario*/
+
+form{
+	width: 350px;
+	margin-left: 20px;
+	background:rgba(243,150,81,0.2);
+	padding: 10px 20px;
+	box-sizing:border-box; 
+	margin-top:20px; 
+	border-radius:5px;
+
+}
+
+h2{ 
+	text-align: center;
+	margin: 0; 
+	font-size: 30px;
+	margin-bottom: 10px;
+	
+}
+
+input, textarea{
+	width: 100%;
+	margin-bottom: 20px;
+	padding:7px;
+	box-sizing:border-box;
+	font-size:17px;
+	border:none;
+}
+
+textarea{
+	min-height:100px;
+	max-height:200px;
+	max-width:100%;
+	
+}
+
+#botton{
+	background:rgba(237,168,85,1.00);
+	color:#fff;
+	padding:20px;
+}
+
+#botton:hover{
+	cursor:pointer;
+}
+	
+@media (max-width:480px){
+	form{width:100%;}
+}
+
+h1{ 
+text-align: center;
+font-size:40px;
+margin-top:20px;
+}
+
+/*Fin Formulario*/
+
+/*Inicio tabla*/
+.table{
+	margin:20px;
+	
+}
+
+.item{
+	margin-left:70px;
+	padding:10px;
+	
+}
+
+.redsocial{
+	font-family: "BlackJack Font";
+	font-size: 30px;
+}
+
+.redes{
+	font-size:25px;
+}
+
+.columna1{ 
+margin:30px;
+}
+
+.item2{
+	margin-left:70px;
+	padding:35px;
+}
